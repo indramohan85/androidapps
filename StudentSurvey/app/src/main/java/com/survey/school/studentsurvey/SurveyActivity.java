@@ -108,8 +108,9 @@ public class SurveyActivity extends AppCompatActivity {
                 getQuestions();
             } else if (questions.isLast()) {
                 btnNext.setText("Submit Survey");
-                surveyDetails.setStudentDetails(studentDetails);
                 radioButtonId = rgOptions.getCheckedRadioButtonId();
+                if(radioButtonId < 0 ) return;
+                surveyDetails.setStudentDetails(studentDetails);
                 selectedRadio = (RadioButton) findViewById(radioButtonId);
                 optionId = Integer.parseInt(Utility.getKeyFromValue(mapOptions, selectedRadio.getText().toString()));
                 quesId = Integer.parseInt(questions.getString(questions.getColumnIndex(Constants.COLUMN_QUES_ID)));
@@ -122,6 +123,7 @@ public class SurveyActivity extends AppCompatActivity {
                 Utility.showMessage("Survey", db.insertSurvey(surveyDetails), this);
             } else {
                 radioButtonId = rgOptions.getCheckedRadioButtonId();
+                if(radioButtonId < 0 ) return;
                 selectedRadio = (RadioButton) findViewById(radioButtonId);
                 optionId = Integer.parseInt(Utility.getKeyFromValue(mapOptions, selectedRadio.getText().toString()));
                 quesId = Integer.parseInt(questions.getString(questions.getColumnIndex(Constants.COLUMN_QUES_ID)));
