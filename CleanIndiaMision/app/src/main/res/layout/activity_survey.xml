@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.survey.school.cleanindiamision.SurveyActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/tvQuestion"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbUserRating"
+        android:numStars="5"
+        android:stepSize="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:progressTint="@color/colorPrimary"
+        android:secondaryProgressTint="@color/colorPrimary"
+        android:progressBackgroundTint="@color/colorPrimary"
+        android:scaleX="0.75"
+        android:scaleY="0.75"
+        android:layout_gravity="left"
+        android:max="5"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Next"
+        android:textSize="20sp"
+        android:background="@drawable/mybutton"
+        android:id="@+id/btnNext"
+        />
+
+</LinearLayout>
